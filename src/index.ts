@@ -6,24 +6,14 @@ async function exampleController() {
 
    const studentServices = new StudentServices();
 
-   const studentInfo1 = await studentInfoServices.create({ address: "Endereço 1", phone: "3333-3333", studentId: 1 });
-   const studentInfo2 = await studentInfoServices.create({ address: "Endereço 2", phone: "3533-3533", studentId: 2 });
-   
-   console.log(studentInfo1);
-   console.log(studentInfo2);
+   const updateStudent = await studentServices.updateOne(1, { name: "Rodolfo Nogueira"});
 
-   const findOne = await studentServices.findOne(1);
+   console.log(updateStudent);
 
-   const findMany = await studentServices.findMany();
+   const updateStudentInfo = await studentInfoServices.updateOne(1, { phone: "(41) 99898-8989"});
 
-   const searchMany = await studentServices.findMany("rodolf");
-
-   console.log(findOne);
-
-   console.log(findMany);
-
-   console.log(searchMany);
+   console.log(updateStudentInfo)
 }
 
-//exampleController();
+exampleController();
 

@@ -15,3 +15,5 @@ export interface IStudentInfo{
 }
 
 export type TCreateStudentInfoBody = Omit<IStudentInfo, "id">;
+
+export type TUpdateStudentInfoBody = Partial<Pick<IStudentInfo, "phone" | "address">>;
