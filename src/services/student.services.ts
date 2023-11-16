@@ -1,5 +1,5 @@
 import { prisma } from "../database/prisma";
-import { TCreateStudentBody } from "../interfaces/student.interfaces";
+import { TCreateStudentBody, TUpdateStudentBody } from "../interfaces/student.interfaces";
 
 export class StudentServices {
    async create(body: TCreateStudentBody) {
@@ -23,4 +23,4 @@ export class StudentServices {
          include: { studentInfo: true },
       });
    }
-}
+}   
