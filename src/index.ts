@@ -3,9 +3,9 @@ import { StudentServices } from "./services/student.services";
 import { StudentInfoServices } from "./services/studentInfo.services";
 
 async function exampleController() {
-   const questionServices = new QuestionServices();
+   const studentServices = new StudentServices();
 
-   await questionServices.deleteMany(2);
+   await studentServices.delete(1);
 
 
 }
