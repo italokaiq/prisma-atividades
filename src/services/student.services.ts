@@ -27,4 +27,8 @@ export class StudentServices {
    async updateOne(id: number, data: TUpdateStudentBody){
       return await prisma.student.update({ where: { id }, data });
    }
+
+   async delete(id: number){
+      return await prisma.student.delete({ where: { id }});
+   }
 }   
