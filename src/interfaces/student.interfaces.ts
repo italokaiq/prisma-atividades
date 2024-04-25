@@ -9,10 +9,13 @@ model Student{
 }
 */
 
-export interface IStudent{
-    id: number;
-    name: string;
-    email: string;
+import { StudentInfo } from "./studentInfo.interface";
+
+export interface Student {
+  id: number;
+  name: string;
+  email: string;
+  studentInfo?: StudentInfo;
 }
 
-export type TCreateStudentBody = Omit<IStudent, 'id'>;
+export type CreateStudent = Omit<Student, "id" | "studentInfo">;
